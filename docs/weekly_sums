@@ -1,0 +1,33 @@
+Tim Benton
+Full Stack ILC
+Summer 2021
+Weekly Summaries
+
+Week 1
+- Study basic html
+  - DOM : HTML is encoded as a tree structure with each element as a node
+    - An HTML doc is parsed and translated as a DOM by the browser
+  - Doctypes : informs browser of type of document contained
+  - Elements : objects in html doc tree
+  - Attributes : keywords used to control element behavior
+  - Block vs Inline : Block elements essentially have a newline char encoded
+  - Headers : Block element of header text
+  - Line Breaks : breaks inline element to new line
+  - Strong & Emphasis : visual and auditory elements
+  - Underline : purely visual element
+  - Links (external, internal, relative)
+    - External : link to external webpage
+    - Internal : link to location in current doc
+    - Relative : link to page filepath relative to current doc
+  - Images : can reference file or link. 
+    - Alternate display text, title, width and height are attributes
+  - Div : the most common element. Block element and can have most other elements embedded inside
+  - List (ordered & unordered) : automated numbered or bulletted lists
+  - Tables : Once used for site formatting, now most commonly used for emails and pdfs. Non-responsive
+  - Responsiveness : The ability of a website to dynamically format based on viewport display
+
+- Code example snips of html for practice
+- Make a master html doc of all html learned to date
+  - Include relavent theory using comments
+
+Week 2
