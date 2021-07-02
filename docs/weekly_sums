@@ -31,3 +31,39 @@ Week 1
   - Include relavent theory using comments
 
 Week 2
+- Study basic web concepts
+  - Web requests : aka "handshakes", the exchange of information between users and servers
+    - the size is variable depending on the information being exchanged
+  - Request types : 
+    - GET : the "standard" request. Receives information
+    - POST : saving information
+    - DELETE : deleting info
+    - PUT/PATCH : update info
+  - Domain Name Mapping : websites point to IP addresses, which communicate with servers
+  - Request Lifecycle : when a request to access a site is sent, the server may accept the request and 
+    output the relevent data as a response 
+    - Then the browser downloads the data and saves them on the local computer (cache),
+      piecing it together to render the content
+  - Server response : can be any format, but is typically HTML/CSS/JavaScript or plain text or json
+    - For APIs, requests are generally smallish and similar to plain text
+    - Browsers download responses and the browser engine handles parsing and extracting the relevant data
+- Study intermediate HTML
+  - Favicons : tab icons
+  - Pathing file structure
+  - Inline CSS
+  - HTML Classes : similar to C family classes. Seems to essentially consist of a number of fields. Maybe more like a struct
+  - HTML IDs : unique identifier
+  - Code Formatting
+  - HTML Entities : instead of escape charaters, html uses this "entity" concept
+  - Forms (buttons, fields, etc)
+  - Embedded video
+- Code a simple website with HTML and a little CSS
+
+Week 3
+- Study CSS concepts
+  - CSS : Cascading Style Sheets
+    - Can be "applied" 3 ways:
+      - Inline : with style HTML attribute
+      - Internal : with <style> element
+      - External : with .css files
+  - 
