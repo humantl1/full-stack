@@ -1,0 +1,112 @@
+<!--
+    css has two components: selector and declaration
+        declaration is made of a property and value
+
+    <style>
+        selector {property: value; property2: value2;}
+                  ^-declaration-^   ^-declaration-^
+        <body> { background-color: black } </body>
+
+    </style>
+
+    inline vs internal c:ss
+    inline : 
+        <h1 style="font-size: 10px;">This is inline CSS</h1>
+    internal :
+        <style>
+            body { font-size: 10px; }
+        </style>
+    
+    classes : 
+        denoted by: .ClassName 
+        referenced by element using: <tag class="ClassName">
+        multiple classes referenced by separating with a space
+    
+    IDs : 
+        denoted by: #IDName
+        should only reference once in document
+        The same ID can be referenced multiple times with CSS, but won't work with JavaScript 
+
+        Group Selectors: 
+        selectors can be grouped by separating with comma
+
+    Nesting Selectors:
+        by spacing selectors, nested elements can be selected
+    
+    CSS comments:
+        /* comment */ 
+        ctrl+'/' hotkey
+    
+    link states:
+        syntax : link:state e.g. a:<blank> default, a:hover, a:active (press and hold), a:visited
+    
+    measurement styles:
+        px:  absolute
+        em:  relative to font-size of direct or nearest parent
+        rem: relative to font-size of root
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(207, 200, 184);
+                background-image: url("fall_leaves.jpg");
+                /* background-size: contain; tiles */
+                background-size: cover;
+                background-position: center center;
+            }
+            h1 {
+                margin: 0;
+            }
+            h1 span {color:rgb(230, 179, 58)}
+            h1 span span {color:rgb(174, 189, 66)}
+            span.RedBorder {
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 20%);
+                border-radius: 7px;
+                padding: 5px;
+            }
+            div.Circle {
+                border-style: solid;
+                border-color: black;
+                border-width: 5px;
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+            }
+            a {color: black}
+            a:hover {color:rgb(134, 147, 66)}
+            a:active {color:cadetblue}
+            a:visited {color:maroon}
+            h1.Title {
+                font-size: 80px;
+                color: rgba(200, 50, 70, 80);
+            }
+            div.Title {
+                color: rgba(0, 0, 0, 70%);
+            }
+            .Title {
+                text-align: center;
+            } 
+        </style>
+    <head>
+    <body>
+        <h1 class="Title">
+            Autu<span>m<span>n</span></span> Colors
+        </h1>
+        <div class="Title"><span class="RedBorder">A memory recollection service</span></div>
+        <br><br><br><br><br>
+        <div class="Circle"></div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <a href="https://www.pinterest.com.au/sarahrenaeclark/autumn-color-palettes/">
+            Color Palette
+        </a>
+        <br><br>
+        <footer>&copy 2021 AM Design</footer>
+    </body>
+</html>

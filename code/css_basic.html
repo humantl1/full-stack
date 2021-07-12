@@ -1,0 +1,113 @@
+<!--
+    css has two components: selector and declaration
+        declaration is made of a property and value
+
+    <style>
+        selector {property: value; property2: value2;}
+                  ^-declaration-^   ^-declaration-^
+        <body> { background-color: black } </body>
+
+    </style>
+
+    inline vs internal c:ss
+    inline :
+        <h1 style="font-size: 10px;">This is inline CSS</h1>
+    internal :
+        <style>
+            body { font-size: 10px; }
+        </style>
+
+    classes :
+        denoted by: .ClassName
+        referenced by element using: <tag class="ClassName">
+        multiple classes referenced by separating with a space
+
+    IDs :
+        denoted by: #IDName
+        should only reference once in document
+        The same ID can be referenced multiple times with CSS, but won't work with JavaScript
+
+    Group Selectors:
+        selectors can be grouped by separating with comma
+
+    Nesting Selectors:
+        by spacing selectors, nested elements can be selected
+
+    CSS comments:
+        /* comment */
+        ctrl+'/' hotkey
+
+    link states:
+        syntax : link:state e.g. a:<blank> default, a:hover, a:active (press and hold), a:visited
+
+    measurement styles:
+        px:  absolute
+        em:  relative to font-size of direct or nearest parent
+        rem: relative to font-size of root
+
+    ***display types***
+        inline : inline display type overrides block display type. Especially important for divs,
+            as div is a placeholder used for malleability
+        display: inline : width, height, margins, and float properties have no effect
+        display: inline-block : the above properties DO still have an effect
+        display: block : turn into block element
+
+    change width / height
+        width: 500px or 90%
+        height: 100px or 50%
+        max-width: 200px or 70%
+
+    padding / margin
+        padding: space inside border
+        margin: space outside border
+
+    floating text (wrap text on object)
+        float: [right, left]
+
+    ***external style sheet***
+        <link rel="stylesheet" href="file_name.css"
+        this way the same style sheet can be used in multiple html files
+        performance boost as well: style sheet only has to be downloaded once, for all pages that link it
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic CSS</title>
+        <link rel="stylesheet" href="css_basic_style.css">
+    <head>
+    <body>
+        <h1 class="Title">
+            Autu<span>m<span>n</span></span> Colors
+        </h1>
+        <div class="Title"><span class="RedBorder">A memory recollection service</span></div>
+        <br><br><br><br><br>
+        <div class="Circle"></div>
+        <br><br><br>
+        <!-- Block / Inline Modification -->
+        <div class="Width">30% width</div>
+        <div class="Inline">side</div>
+        <div class="Inline">by</div>
+        <div class="Inline">side</div>
+        <div class="BlockInline">box</div>
+        <div id="box"></div>
+        <img src="communityIcon_plpfcc116az31.png" width="200px" class="Float">
+        <div >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Similique odio doloribus aliquid ipsam consectetur. Dolore est incidunt
+            optio veniam dolorum qui quo illum, officiis, distinctio consectetur, ut
+            animi voluptate? Doloribus.</div>
+        <div >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Similique odio doloribus aliquid ipsam consectetur. Dolore est incidunt
+            optio veniam dolorum qui quo illum, officiis, distinctio consectetur, ut
+            animi voluptate? Doloribus.</div>
+        <div id="box2">Translucent</div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <a href="https://www.pinterest.com.au/sarahrenaeclark/autumn-color-palettes/">
+            Color Palette
+        </a>
+        <br><br>
+        <footer>&copy 2021 AM Design</footer>
+    </body>
+</html>

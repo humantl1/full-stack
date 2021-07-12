@@ -66,4 +66,26 @@ Week 3
       - Inline : with style HTML attribute
       - Internal : with <style> element
       - External : with .css files
-  - 
+  - Class : containers that store one or more CSS rules that can be applied to one or more HTML elements
+  - ID : unique container that stores rules similar to class attribute. Has advanced applications in regards to JavaScript
+  - Syntax :
+    - Selector : denote which element(s) CSS rule(s) will be applied to
+      - These selectors can be grouped to appy to multiple element types or nested to apply to specific nested element schemes
+    - Declaration : this is the rule that will be applied to selected elements
+      - Property : the type of rule to be applied, e.g. font-size
+      - Value : the value of the property to be applied, e.g. the specific font point size to be applied
+  - Some specific CSS rules that stand out:
+    - Link states : rules that apply to specific states links can have, e.g. hovered over or previously visited
+    - Measurement systems : just as there are multiple measurement systems for physical objects, CSS has multiple systems as well
+      - px : absolute pixels size
+      - em : relative to size of direct or nearest parent element
+      - rem : relative to size of root element
+    - Display Types : This seemed maybe the most important basic rule. Changes the the behavior of an element in regards to default
+        element width and which rules can be applied to an element. Gives the div element great flexibility.
+    - There are many text-specific rules; effectively CSS allows complete control over text display
+    - Padding/Margin : CSS uses a space format that has a border-area around an element and then a padding buffer between the element
+        and border and a margin buffer outside of the border. These can be modified or eleminated.
+- Code CSS
+  - Constructed a html/css document that contains both examples and documentation of concepts learned this week
+  - Constructed a website homepage using CSS following a requested design specification.
+
