@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate CSS Project</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* .page-top {
+            display: flex;
+            flex-wrap:wrap;
+        }
+        .page-top__header {
+            flex-basis: 100%;
+            flex-grow: 100%;
+            flex-shrink: 0%;
+            border: 1px solid red;
+        } */
+        .test-border {
+            border: 1px solid red;
+        }
+        .flex-horz {
+            display:flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+        .flex-vert {
+            display:flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+
+        }
+        .page {
+            display: grid;
+            grid-template-rows: 25.5px 2300px 140px;
+            padding: 0 30px;
+        }
+        .header {}
+        .body {}
+        .page-top {
+            display: grid;
+            grid-template-columns: 60% 3fr 1fr;
+            grid-template-rows: 80px 80px;
+        }
+        .page-top__title-1 {
+            font-size: 3.5vw;
+        }
+        .page-top__title-2 {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            font-size: 3.5vw;
+        }
+        .page-top__navigation {
+        font-size: 16pt;
+        /* align-items: center; */
+        }
+        .page-top__link {
+            flex: 1 1 0;
+            position:relative;
+            top: 15px;
+        }
+        .page-top__name {
+            font-size: 12pt;
+            font-style: italic;
+            position:relative;
+            top: 15px;
+            text-align: right;
+        }
+        .content {
+            position: relative;
+            top: -35px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 600px 400px 400px 550px;
+            grid-column-gap: 35px;
+            grid-row-gap: 35px;
+        }
+        .content__pic-1-1 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .content__pic-1-2 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        .content__pic-2-1 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            position: relative;
+        }
+        .pic__cap1 {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: -78px;
+        }
+        .pic__cap2 {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: -34px;
+        }
+        .pic__cap__text {
+            flex: 1 1 auto;
+            font-size: 30pt;
+            font-style: italic;
+        }
+        .content__pic-3-1 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            position: relative;
+        }
+        .content__pic-3-2 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            position:relative
+        }
+        .content__pic-4-1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            position:relative;
+        }
+        .content__pic-4-2 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        .content__text {
+            flex: 0 1 64px;
+            align-items: center;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .content__img {
+            flex: 1 1 auto;
+        }
+        .footer {
+        }
+        .footer__navigation {
+            flex: 0 0 30%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .footer__link {
+            align-self: center;
+        }
+        .footer__blank {
+            flex: 1 1 auto;
+        }
+        .footer__contact {
+            flex: 0 0 20%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+        .footer__call-card {
+            align-self: flex-end;
+        }
+        .footer__copy {
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-border page">
+        <div class="test-border header"></div>
+        <div class="test-border body">
+            <div class="page-top">
+                <div class="test-border page-top__title-1">Hello, this is Emily, I'm a developer</div>
+                <div class="test-border page-top__title-2">based in <em>Shanghai.</em></div>
+                <div class="test-border flex-horz page-top__navigation">
+                    <div class="test-border page-top__link">Linkedin</div>
+                    <div class="test-border page-top__link">Instagram</div>
+                    <div class="test-border page-top__link">Email</div>
+                </div>
+                <div class="test-border page-top__name">Emily Zhao</div>
+            </div>
+            <div class="test-border content">
+                <div class="test-border content__pic-1-1 flex-vert">
+                    <div class="test-border content__img"></div>
+                    <div class="test-border content__text">Mona Jewelry Visual Identity</div>
+                    <div class="test-border content__text"></div>
+                </div>
+                <div class="test-border content__pic-1-2 flex-vert">
+                    <div class="test-border content__img"></div>
+                    <div class="test-border content__text">Miansai Jewelry Poster Design</div>
+                </div>
+                <div class="test-border content__pic-2-1 flex-vert">
+                    <div class="test-border content__img">
+                        <div class="test-border pic__cap1">
+                            <div class="test-border pic__cap__text">Branding</div>
+                            <div class="test-border pic__cap__text">Typography</div>
+                        </div>
+                    </div>
+                    <div class="test-border content__text">Adol Career Visual Identity</div>
+                </div>
+                <div class="test-border content__pic-3-1 flex-vert">
+                    <div class="test-border content__img">
+                        <div class="test-border pic__cap1">
+                            <div class="test-border pic__cap__text">Visual</div>
+                            <div class="test-border pic__cap__text">Identity</div>
+                        </div>
+                    </div>
+                    <div class="test-border content__text">JLG Visual Identity</div>
+                </div>
+                <div class="test-border content__pic-3-2 flex-vert">
+                    <div class="test-border content__img">
+                        <div class="test-border pic__cap1">
+                            <div class="test-border pic__cap__text">Photography</div>
+                            <div class="test-border pic__cap__text">Animation</div>
+                        </div>
+                    </div>
+                    <div class="test-border content__text">quip product shooting</div>
+                </div>
+                <div class="test-border content__pic-4-1 flex-vert">
+                    <div class="test-border content__img">
+                        <div class="test-border pic__cap2">
+                            <div class="test-border pic__cap__text"> </div>
+                            <div class="test-border pic__cap__text">Website Design</div>
+                        </div>
+                    </div>
+                    <div class="test-border content__text">Reco Mask Webite UI Design</div>
+                </div>
+                <div class="test-border content__pic-4-2 flex-vert">
+                    <div class="test-border content__img"></div>
+                    <div class="test-border content__text">Book Design</div>
+                </div>
+            </div>
+        </div>
+        <div class="test-border footer flex-horz">
+            <div class="test-border footer__navigation">
+                <div class="test-border footer__link">Linkedin</div>
+                <div class="test-border footer__link">Instagram</div>
+                <div class="test-border footer__link">Email</div>
+            </div>
+            <div class="test-border footer__blank"></div>
+            <div class="test-border footer__contact">
+                <div class="test-border footer__call-card">Get in touch. Let's work together.</div>
+                <div class="test-border footer__copy">emilyzhao2020</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
