@@ -5,7 +5,7 @@ Weekly Summaries
 
 Week 1
 - Study basic html
-  - DOM : HTML is encoded as a tree structure with each element as a node
+  - DOM (Document Object Model) : HTML is encoded as a tree structure with each element as a node
     - An HTML doc is parsed and translated as a DOM by the browser
   - Doctypes : informs browser of type of document contained
   - Elements : objects in html doc tree
@@ -60,7 +60,7 @@ Week 2
 - Code a simple website with HTML and a little CSS
 
 Week 3
-- Study CSS concepts
+- Study basic CSS concepts
   - CSS : Cascading Style Sheets
     - Can be "applied" 3 ways:
       - Inline : with style HTML attribute
@@ -85,7 +85,35 @@ Week 3
     - There are many text-specific rules; effectively CSS allows complete control over text display
     - Padding/Margin : CSS uses a space format that has a border-area around an element and then a padding buffer between the element
         and border and a margin buffer outside of the border. These can be modified or eleminated.
-- Code CSS
+- Code CSS & HTML
   - Constructed a html/css document that contains both examples and documentation of concepts learned this week
   - Constructed a website homepage using CSS following a requested design specification.
 
+Week 4
+- Study intermediate CSS concepts
+  - Box model : spatial sub-components each element is composed of.
+    - Radiating out from the center, this is value -> padding -> border -> margin -> outline
+  - Position : essential for the positioning of elements on a page. Values are:
+    - static : default positioning
+    - relative : relative positioning according to default static position
+    - absolute : ironically, this is relative to the parent positioning property. 
+      - parent positioning must be set to relative
+    - fixed : fixes positiong to viewport position. So when scrolling, element remains "fixed"
+    - sticky : fixed to viewport relative to parent element. Only works intuitively relative to the top of viewport
+    - z-index : layer positioning of element
+  - Text overflow : values are hidden, visible, auto and scroll. Essentially, determines when scroll bars are available
+  - Specificity : very important concept only touched on briefly. Properties are applied to elements based on how specifically
+    selectors are applied
+  - Advanced selectors : allow for selecting elements relative to other elements, e.g. select immediate descendents of specific class
+  - Pseudo selectors : select according to specific state or aspect of an element, e.g. the 2nd child of a parent or mouse hovered over
+  - Pseudo elements : give css some html functionality, e.g. create element after specified element
+  - Transitions : allow for interpolating between states, e.g. fade in color on mouse hover
+  - Animations : little scripts that essentially apply transitions to any element
+  - Flexbox : layout module that creates flexible, responsive layout structures in a page
+    - Gives elements dynamic space slots
+    - Complex topic, demonstrated exctensivly in my weekly project.
+  - Grid : another layout module. different use-case then Flexbox.
+    - As the name suggests, allows defining a dynamic grid, and then selecting which element goes in which grid location
+- Code CSS & HTML
+  - Extend html/css reference document to include more advanced css concepts
+  - Construct a complex website front page using animations, grid, flexbox and other intermediate CSS functionality.
