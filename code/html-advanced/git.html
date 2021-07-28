@@ -1,0 +1,107 @@
+<!-- HTML Project -->
+
+<!DOCTYPE>
+<html>
+    <head>
+        <title>HTML Project</title>
+        <link rel="shortcut icon" href="communityIcon_plpfcc116az31.png" type="image/png">
+        <style>
+            body {background-color: #fcfcf3;}
+            th, td {
+                padding: 10px;
+                border-bottom: 1px dotted black;
+            }
+            th {
+                text-align:left;
+            }
+            .Command {
+                color:black;
+                font-style: italic;
+                font-weight: bold;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                margin-left: "10%";
+            }
+            .Center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center">
+            <span style="color:#00909a">Git</span>
+            <span style="color:#f44f29">Guide</span></h1>
+        <p>
+            <h4 style="text-align: center">This is a work-in-progress simple command guide to using command line git.</h4>
+        </p> <br><br><br>
+        <table class="Center" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th style="color:#f44f29">Command</th>
+                    <th style="color:#f44f29">Description</th>
+                    <th style="text-align: center;">Resources</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="10%" rowspan="3" style="color:#00909a"><strong>Initialization</strong></td>
+                    <td class="Command">git init</td>
+                    <td width="40%">Initialize a .git directory</td>
+                    <td rowspan="3" style="text-align: center;">
+                       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vbQ2bYHxxEA" 
+                       title="YouTube video player" frameborder="0" allow="encrypted-media;" allowfullscreen></iframe> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Command">git init -b master</td>
+                    <td>Initialize local directory as a git repository</td>
+                </tr>
+                <tr>
+                    <td class="Command">git remote add origin 'remote URL'</td>
+                    <td>Set remote URL as the master repository</td>
+                </tr>
+                <tr>
+                    <td rowspan="4" style="color:#00909a"><strong>Committing</strong></td>
+                    <td class="Command">git add <em>'filename'</em></td>
+                    <td>Stage file changes</td>
+                    <td rowspan="4" style="text-align: center;">
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ruieT3Nkg2M" 
+                        title="YouTube video player" frameborder="0" allow="encrypted-media;" allowfullscreen></iframe>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Command">git add .</td>
+                    <td>Stage all files</td>
+                </tr>
+                <tr>
+                    <td class="Command">git commit -m 'description'</td>
+                    <td>Commit files</td>
+                </tr>
+                <tr>
+                    <td class="Command">git push origin master</td>
+                    <td>Push changes to the master repository</td>
+                </tr>
+                <tr>
+                    <td rowspan="3" style="color:#00909a"><strong>Miscellaneous</strong></td>
+                    <td class="Command">git status</td>
+                    <td>Display file modification and commit status</td>
+                    <td rowspan="3" style="text-align: center;">
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ah2bkOfZbVA" 
+                        title="YouTube video player" frameborder="0" allow="encrypted-media;" allowfullscreen></iframe>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Command">git log</td>
+                    <td>Display commit history</td>
+                </tr>
+                <tr>
+                    <td class="Command">git reset --hard <em>commit-id</em></td>
+                    <td>Delete all changes after specified commit ID</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br><br><br>
+        <footer>Copyright &copy; 2021 AM Design</footer>
+    </body>
+</html>

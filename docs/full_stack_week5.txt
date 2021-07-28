@@ -1,0 +1,34 @@
+Tim Benton
+Full Stack ILC
+Summer 2021
+Week 5 summary
+
+What I did:
+This week I studied the last of my CSS content. This focused on responsive css 
+techniques. Responsiveness in web development is the ability for a page to adapt
+to various viewport sizes. In the current paradigm of various mobile, pad, laptop,
+and desktop environments, as well as large smart tvs, responsiveness is incredibly
+important. The qualifier that allows css to have responsive capabilities is the
+viewport meta tag. Css defaults to rendering a page as a virtual viewport that is
+larger than the physical viewport and then scaling this virtual viewport down. This
+makes pages that aren't responsive look nicer, but hinders the ability to intentionally
+make a page responsive. 
+
+Some of the responsive technques I learned were the media query syntax, which is
+selector that directs different code fragments to execute given different trigger
+parameters. When these paramters are viewport sizes, media query syntax has the 
+abiltity to exectute different code for different viewport sizes, thus altering
+layout depending on screen size. Responsiveness in elements themselves is also
+important. Embedded media on pages, such as images and video, can throw off the 
+layout of a page if not well executed. To make these media responive, tricks can
+used where the media is embedded inside of a container and scaled to the size of
+the container. Then the container is set to be a percentage of viewport width, which
+has the effect of adjusting the media according to viewport size. In general,
+flexbox and grid should be used as the foundation of a responsive layout, as these
+tools are built with responsive functionality in mind.
+
+Problems I had:
+Similar to last week, it is not always easy knowing how elements will work when they
+are cascaded inside of each other. In my inexperience, this still takes a lot of 
+trial and error, which takes time. I feel comfortable that I can achieve most of 
+look I am attempting for a page, but my efficiency could greately increase.

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" > <!-- unicode selector-->
+        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+        <title>Advanced CSS</title>
+        <link rel="stylesheet" href="css_advanced_style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap" rel="stylesheet">
+    <head>
+    <body>
+        <h1 class="Title">
+            Autu<span>m<span>n</span></span> Colors
+        </h1>
+        <div class="Title"><span class="RedBorder">A memory recollection service</span></div>
+        <br><br><br><br><br>
+        <div class="Circle"></div>
+        <br><br><br>
+        <!-- Block / Inline Modification -->
+        <div class="Width">30% width</div>
+        <div class="Inline">side</div>
+        <div class="Inline">by</div>
+        <div class="Inline">side</div>
+        <div class="BlockInline">box</div>
+        <div id="box"></div>
+        <img src="communityIcon_plpfcc116az31.png" width="200px" class="Float">
+        <div >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Similique odio doloribus aliquid ipsam consectetur. Dolore est incidunt
+            optio veniam dolorum qui quo illum, officiis, distinctio consectetur, ut
+            animi voluptate? Doloribus.</div>
+        <div class="online-font">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Similique odio doloribus aliquid ipsam consectetur. Dolore est incidunt
+            optio veniam dolorum qui quo illum, officiis, distinctio consectetur, ut
+            animi voluptate? Doloribus.</div>
+        <div id="box2">Translucent</div>
+        <div class="box-model">
+            Hello World
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, harum?
+            Quos eos adipisci doloribus facilis mollitia obcaecati!
+            Veniam obcaecati officia sit sapiente, provident mollitia,
+            amet consectetur ipsum maiores distinctio suscipit.
+        </div>
+        <div>
+            <a href="https://www.pinterest.com.au/sarahrenaeclark/autumn-color-palettes/">
+                Color Palette
+            </a>
+        </div>
+        <div>
+            <a class="button">click</a>
+        </div>
+        <div class="fletter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, harum?
+            Quos eos adipisci doloribus facilis mollitia obcaecati!
+            Veniam obcaecati officia sit sapiente, provident mollitia,
+            amet consectetur ipsum maiores distinctio suscipit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, harum?
+            Quos eos adipisci doloribus facilis mollitia obcaecati!
+            Veniam obcaecati officia sit sapiente, provident mollitia,
+            amet consectetur ipsum maiores distinctio suscipit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, harum?
+            Quos eos adipisci doloribus facilis mollitia obcaecati!
+            Veniam obcaecati officia sit sapiente, provident mollitia,
+            amet consectetur ipsum maiores distinctio suscipit.
+        </div>
+        <div class="container">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0oRN0VeJlu4"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="bottom">
+            <div class="shape">
+
+            </div>
+            <footer class="footer">&copy 2021 AM Design</footer>
+        </div>
+    </body>
+</html>
+<!--
+    css has two components: selector and declaration
+        declaration is made of a property and value
+
+    <style>
+        selector {property: value; property2: value2;}
+                  ^-declaration-^   ^-declaration-^
+        <body> { background-color: black } </body>
+
+    </style>
+
+    inline vs internal c:ss
+    inline :
+        <h1 style="font-size: 10px;">This is inline CSS</h1>
+    internal :
+        <style>
+            body { font-size: 10px; }
+        </style>
+
+    classes :
+        denoted by: .ClassName
+        referenced by element using: <tag class="ClassName">
+        multiple classes referenced by separating with a space
+
+    IDs :
+        denoted by: #IDName
+        should only reference once in document
+        The same ID can be referenced multiple times with CSS, but won't work with JavaScript
+
+    Group Selectors:
+        selectors can be grouped by separating with comma
+
+    Nesting Selectors:
+        by spacing selectors, nested elements can be selected
+
+    CSS comments:
+        /* comment */
+        ctrl+'/' hotkey
+
+    link states:
+        syntax : link:state e.g. a:<blank> default, a:hover, a:active (press and hold), a:visited
+
+    measurement styles:
+        px:  absolute
+        em:  relative to font-size of direct or nearest parent
+        rem: relative to font-size of root
+
+    ***display types***
+        inline : inline display type overrides block display type. Especially important for divs,
+            as div is a placeholder used for malleability
+        display: inline : width, height, margins, and float properties have no effect
+        display: inline-block : the above properties DO still have an effect
+        display: block : turn into block element
+
+    change width / height
+        width: 500px or 90%
+        height: 100px or 50%
+        max-width: 200px or 70%
+        min-width: 100px or 50% // can be combined with max-width
+
+    floating text (wrap text on object)
+        float: [right, left]
+
+    ***external style sheet***
+        <link rel="stylesheet" href="file_name.css"
+        this way the same style sheet can be used in multiple html files
+        performance boost as well: style sheet only has to be downloaded once, for all pages that link it
+
+    INTERMEDIATE
+
+    ***box model***
+        padding / margin
+            padding: space inside border
+            margin: space outside border
+        box-sizing: property used to denote if padding/margin change overall box size
+            content-box: margin/padding changes overall box size
+            border-box: margin/padding does not change box size
+        outline : outermost border
+            - often used for accessability to mark selected element
+            outline-offset: moves outline outwords
+
+    ***CSS position***
+        relative : relative to default static position
+            - properties top:, bottom:, left:, right: move element
+            - good for small position adjustments of elements
+        absolute : moves element relative to parent
+            - parent element must be set to position: relative
+        fixed : fixed to location on viewport
+            - position values should be set, e.g. top
+        sticky : fixed to relative location of parent element
+            - new as of CSS3
+            - needs to have position value, e.g. top
+            - does not actually work for bottom like it does for top
+            - usefull for responsiveness
+        static : default positioning
+
+            z-index: change layering
+
+    text overflow
+        overflow:
+            - hidden : hide overflow
+            - visible : standard behavior
+            - auto : scroll bars will appear as necessary
+            - scroll : vert and horiz scroll bars always appear
+
+    ***specificity***
+        - if there are conflicting rules for the same element, the most specific rules are the ones appied
+        - this is a core element of truly understanding css
+
+    ***advanced selectors***
+        - descendant : #id-name .class-name
+            - select all descendents within specified root
+        - child : #id-name > .box
+            - select immediate descendent of specified root
+            - performance is faster than div selector
+        - adjacent sibling: #id-name .class-name + .class-name
+            - select second element only if it immediately follows the first
+        - general sibling: #id-name .class-name ~ .class-name
+            - select all iterations of second element that follow first, even if not adjacent
+
+    ***pseudo selectors***
+        - there are many many of these!
+        - hover : .class-name:hover // effects element when hovered over
+        - not : .class-name:not(.class-name2) // applies to all elements except specified in parentheses
+        ***select without modifying html***
+            - nth child : .class-name:nth-child(n) // applies to nth element of class
+
+    ***pseudo elements***
+        - allows css to have html functionality
+        - before : .class-name::before // pseudo element is first child of parent
+        - after : .class-name::after // psuedo element is last child of parent
+
+            - content: ' ' // space just ensures pseudo element is displayed
+            - pseudo elements and selectors can be stacked.
+                - e.g. <a> links can be modified with a::before to change link element default rules
+                    but also a:hover::before can be used to modify link rules when hovered
+        - first-letter : select first letter of element
+        - first-line : select first line of element in viewport (so, responsive)
+
+    selection selector : ::selection { }
+        - used to modify elements highlighted by user
+
+    transitions
+        - transition: [properties, time]
+        - all selector is performance heavy
+
+    gradiants
+        - there are online "gradiant tools" that allow dynamic adjustment of gradiants and then generate the css
+        - can be used with background to shade the background
+
+    online fonts
+        - can be added via css or html via sites like Google Fonts
+
+    transformations : transform:
+        - translate([x-offset, y-offset]);
+        - rotate:([float]deg)
+        - scale([float])
+        - skew([x-offset], [y-offset]) 1 or 2 arguments ok. skews text too!
+
+    animations: trigger actions without input
+        - requires position: absolute:
+        - create animation :
+            @keyframes animationName {
+                from {
+                    top: 0;
+                    left: 0;
+                }
+                to {
+                    left: 100%;
+                }
+            }
+
+        or
+
+            @keyframes advancedAnimation {
+                0% {
+                    top:0;
+                    left:0;
+                }
+                50% {
+                    background-color: blue;
+                }
+                100% {
+                    background-color: yellow;
+                    left: 100%;
+                }
+            }
+        - in style :
+            animation-name: animationName;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+    ***Flexbox***
+        - layout module that make flexible responsive layout structures possible w/o tables or floating elements
+        - excels at vertical alignment
+
+    ***Grid***
+        - used for template layout
+        - columns
+        - rows
+        - gaps
+
+    Either Grid or Flexbox should be used for layouts!!
+
+    ADVANCED
+
+    For responsive display, the viewport meta element must be set appropriately
+
+    Media query syntax
+        @media (max-width: [number]px) { ... }
+        - this toggles implementation when set parameters are met
+        - the order of @media in relation to the selectors it declares MATTERS
+            - it seems placing the media query after the selectors it calls is the key
+
+    Multiple media queries : sets value range for selection
+        syntax:
+        @media ([property]: [num][unit]) and ([property]: [num][unit]) {
+            [selector] {
+                code ...
+            }
+        }
+
+    "Mobile First"
+        web development concept advocating design for mobile devices before other types
+
+    responsive images
+        percentages can be used to specify image size
+        @media can be used to change image according to specification
+
+    responsive embeds
+        create div container with relative position
+        specify width as a function of screen percentage
+        padding-top can be used to set an aspect ratio
+            set to height/width of desired aspect, e.g. 9/16
+        then, create class for ifram with absolute position
+        set top/left/bottom/right all to 0 to fill container div
+
+    responsive web development design
+        in general, use flexbox and grid, choosing dynamic units when possible
+        and set media queries to switch layouts for stepped display sizes
+-->
+

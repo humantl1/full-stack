@@ -117,3 +117,26 @@ Week 4
 - Code CSS & HTML
   - Extend html/css reference document to include more advanced css concepts
   - Construct a complex website front page using animations, grid, flexbox and other intermediate CSS functionality.
+
+Week 5
+ - study responsive css techniques
+    - viewport meta tag
+      - mobile devices generally render pages in a virtual viewport that is larger
+        than the physical viewport and then shrink it down. This helps make sites
+        not optimized for small viewports look better. However, this makes site that 
+        ARE optimized look worse. The viewport meta tag can be set to render the page
+        at a specified ratio/fixed size.
+    - Media query syntax : this is a toggle selector that can trigger when specified
+      conditions are met. Used to dynamically restructure a page as a function of
+      viewport size.
+      - multiple media queries : multiple media queries can be set to allow stepped
+        functionality and ranges.
+    - mobile-first paradigm : a web development concept advocating for design to be
+      mobile-centric first and formost
+    - responsive images : by specifying image size as a function of screen width,
+      both small and large displays can be accomodated
+    - responsive embeds : embedded video can be enclosed in a div container which
+      is then set to respond dynamically to various display sizes
+    - responsive layout techniques : flexbox and grid should be the foundation for 
+      responsively designed sites if vanilla css is used, with media queries being set
+      for more extensive layout-shifts

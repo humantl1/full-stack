@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="classy">one</div>
+    <div class="classy">two</div>
+    <div class="classy">three</div>
+    <div class="classy">four</div>
+    <div id="grab-example">Some text</div>
+    <div id="character"></div>
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+    <script src="js_intermdediate.js">
+        console.log("hello world");
+        console.warn("warning world");
+        console.error("error, world. jk");
+    </script>
+</body>
+</html>
+
+<!--
+    place scripts elements after all html at the end of the body
+        this is to ensure the rest of the document has been loaded
+
+    internal vs external javascript
+        external: declare in file like external css
+        No css or html in internal javascript!
+
+    Print to console:
+        console.log
+        console.warn
+        console.error
+
+    External files:
+        called similar to css: <script src="script.js"></script>
+
+    Variables:
+        camel case convention
+        a variable is dynamic and can hold different data types
+        var : inside function, scoped to the immediate function body
+            outside function, globally scoped
+            can be re-declared
+        let : scoped to the immediate block
+            can't be re-declared
+            also hoisted, but not initialized
+        const : block scoped, cannot be updated or re-declared
+            however, properties of const objects CAN be updated const is
+            hoisted but not initialized, the same as let
+        "hoisting" : javascript mechanism where variable and function
+        declarations are moved
+        to the top of their scope before execution and initialized
+        with [undefined]
+
+    Data types:
+        string
+        number : is a double with 17 decimal places of precision.
+            there are no ints
+        boolean : 0 is false, all other values are true
+        array : zero based. not fixed length nor type. also []
+        null :
+        undefined : hold no value
+        object : has key:value pair. seems kina like a struct also {}
+        typeof operator returns variable type
+
+        comments same as c++
+
+        operators : c-like
+        '**' : exponent
+
+        conditionals : c-like
+        === : strict equality
+        - unlike equality operator (==) strict equality always considers
+        operators of different types to be different
+        - more performant
+
+    node : an element in the context of javascript
+    nodes can be saved as variables
+    these node variables can be edited by javascript
+    const element = document.getElementById("grab-example");
+    element.innerText = "this instead";
+    element.innerHTML = "this <strong>instead</strong>";
+
+    selecting multiple DOM nodes :
+        say "container" is a class
+        // this will return the first occurence of "container"
+        const con = document.querySelector(".container");
+        //  this will return a list of all occurences of "container" nodes
+        const con = document.querySelector(".container");
+
+    methods : called similar to c with object.method() syntax
+
+    typecasting : all datatypes can be typecast
+        even obects can be cast as simple datatypes, and vice versa
+        typecasting is persistant
+
+    template literal : concantenation similar to c#
+        `words ${var} words`
+        also, newlines in source code are displayed
+        javascript 6+
+
+    arrays :
+        .push() add to back of array & return index
+        .pop() remove from back of array & return element
+
+    array iteration :
+        for loop : c style
+        foreach loop : function. looks like a lambda. arr.forEach(name => {})
+        with iterator : arr.forEach((name, index) => {})
+        classes can be added for each element this way
+            arr.forEach(name => {node.classL.add("class 1", "class 2")});
+
+    method vs function
+        when a function is attached to an element it is a method
+
+    DRY principle : Don't Repeat Yourself
+    Function : c style
+        syntax : function funcName(param1, parame2) {
+            return something;
+        }
+        - unlike c, parameters don't need their type specified, just a name
+        - typecasting parameters inside of a function can help make them
+        more strongly typed
+        - all functions must return something. if no return specified, can be
+        either a default value or undefined
+        - arguments are passed by value
+            - however, object references are values. so, changes to an object's
+            properties in a function change them globally
+
+    rest operator: pass a variable number of arguments
+        - syntax : function funcName(otherParam, ...restParam) {
+            for (index in numbers) {
+                console.log(index);
+            }
+        }
+
+    for...in loop : iterates over property names
+        for (let i in arr) {
+            console.log(i);
+        }: this would print indices and any function names
+
+    for...of loop : iterates over property values
+        for (let i of arr) {
+            console.log(i);
+        }: this would values of indices
+
+    while loop : c style
+
+    objects with functions and default param
+        const obj = {
+            'foo': 'bar',
+            'func': function(param1="filled") {
+                console.log(`function ${param1});
+            },
+            foo2 () { // "object literal", modern js object function
+                console.log("object literal");
+            }
+        }
+
+    ADVANCED
+
+    style
+        - variable names : camel case
+        - const : uppercase
+        - function names : camel case
+        - conditionals : never omit braces
+        - blocks start on end of declaration, end on newline
+
+    page loading : ensure page is loaded before script executes
+        window.onload = function() {
+            alert("Page is loaded");
+            // ideally, all javascript goes inside window.onLoad
+        }
+
+    page unloading
+        window.onbeforeunload = function() {
+            console.log("Before unload"); // necessary to pause leaving
+            alert("you are leaving the page");
+            // does not work in many moder browsers
+            //return "you are leaving the page";
+        }
+
+    closures : inner functions have access to outer functions' scope
+
+    strict mode : preferred way to write code b/c it throws more errors
+    syntax : "use strict";
+
+    timeouts & intervals : wait or wait repeatedly to do a thing
+
+    callback functions : automated callback w/ delay
+        - so, other code executes while callback is spinning
+        - frees up resources
+
+        setTimeout(function() {
+            console.log("delayed text");
+        }, 2500);
+
+        setInterval(function() {
+            console.log("repeat text")
+        }, 2500);
+
+        // interval example with clearing
+        let count = 0;
+        const interval = setInterval(function() {
+            console.log("repeat text")
+            count++;
+
+            if (count === 3) {
+                clearInterval(interval); // can be outside of function
+            }
+
+        }, 2500);
+
+        prompt : popup with input
+        syntax : let name = prompt("Enter name");
+
+    Date formatting : relative to local time
+        - there is a date object
+        - syntax : let d = new Date(2025, 1, 15);
+        - d.getFullYear()
+        - d.getDate()
+        - d.getMonth() etc etc
+
+    destructuring arrays and objects : create variables from arrays/objects
+        - arrays:
+        ...rest syntax can be used
+        const months = ['january', 'febuary', 'november', 'december'];
+        const [jan, feb, ...rest] = months;
+        // jan == january, feb == february, rest == ['november', 'december']
+
+        - objects:
+        similar, but with braces instead of bracketes
+
+
+    object properties can be deleted, variables can't be deleted
+    - delete
+
+    math : Math. big built in math library
+        - round() actually has a common sense implementation :)
+        - random : Math.random() returns float from [0, 1)
+
+    JSON : JavaScript Object Notation
+        - lightweight data interchange format
+        - literally the same format as a javascript object
+
+    Ajax : Asynchronous JavaScript and XML
+        - combination of a browser's built in XMLHttpRequest objects
+        - simplest way for browser to send data to a server and
+            accept data from a server
+        - allows transfer of data without page reloading (so dynamically)
+        - super duper lightweight because transfer packets are tiny
+            - sends just raw JSON data
+        - historically, XMLHttpRequest objects were sent
+            - but now the fetch() API is used
+
+    Fetch : modern way to handle Ajax requests
+        syntax :
+            fetch('http://website.com/')
+                .then(...)
+                .then(...)
+-->
