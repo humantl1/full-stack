@@ -18,7 +18,7 @@
         <li>item 2</li>
         <li>item 3</li>
     </ol>
-    <script src="js_intermdediate.js">
+    <script src="js_intermediate.js">
         console.log("hello world");
         console.warn("warning world");
         console.error("error, world. jk");
@@ -122,6 +122,7 @@
 
     DRY principle : Don't Repeat Yourself
     Function : c style
+        functions are hoisted
         syntax : function funcName(param1, parame2) {
             return something;
         }
@@ -265,4 +266,59 @@
             fetch('http://website.com/')
                 .then(...)
                 .then(...)
+
+   try/catch : c-style
+        throw "message"
+        code that won't execute if error thrown...
+    } catch(error) {
+        console.warn("Error Logging:", error)
+    }
+    throw works well embedded in a function that is called in the try block
+
+    this keyword : standard this... reference to object that is calling
+        interesting example:
+            function counter() {
+                if(this.total === undefined) {
+                    this.total = 1;
+                } else {
+                    this.total++;
+                }
+                console.log("Total is", this.total);
+            }
+
+    arrow function : so... lambdas
+    they can be contrasted with anonymous functions
+        const hello = (name) => {
+            console.log("hello" + name)
+        }
+        hello();
+            vs
+        const anonFunc = function(param) { ... }
+    "this" keyword referes to the function in an anonymous function,
+    in a lambda, "this" refers to its outer scope, even if that is global
+    lambdas are more performant than anonymous
+
+    classes : seem c-like
+        - there can be static methods and properties in classes
+        - classes are not hoisted
+        - instance properties are defined inside of methods, OR
+            - can be declared as fields inside of the class (of course...)
+        - static properties must be defined outside of the class body
+            or as a field inside of the class
+        - private fields are defined with a hash
+        syntax :
+        class ClassName {
+            name2;
+            #password;
+            constructor(name) {
+                this.name = name;
+            }
+            hello() {
+                console.log("hello" + this.name);
+            }
+        }
+
+        const myClass = new ClassName("You");
+        myClass.hello();
+
 -->
