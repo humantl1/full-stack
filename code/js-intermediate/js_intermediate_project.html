@@ -1,0 +1,70 @@
+<!--
+    Randomly select Star Wars character
+    Display information
+        use eventListener
+            fetch() swapi.dev
+    Use info to edit html body
+        query selectors
+
+    Compare two characters?
+
+    x Declare css and js files
+    x implement button
+    x fetch data from swapi
+    x randomize fetch
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 201 Project</title>
+    <link rel="stylesheet" href="js_intermediate_project.css">
+</head>
+<body class="test-border page">
+        <header class ="header">
+            <div></div>
+            <nav>
+                <div>swapi</div>
+                <div>
+                    <ul>
+                        <li>tw</li>
+                        <li>fa</li>
+                        <li>rd</li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <header class="title">Star Wars Character Selector</header>
+            <section class="character">
+                <header class="character__name">Character</header>
+                <section class="character__info">
+                    <article class="character__attributes">
+                        <div>Gender:</div>
+                        <div>Height:</div>
+                        <div>Weight:</div>
+                        <div>Birth year:</div>
+                        <div>Homeworld:</div>
+                        <div>Species:</div>
+                    </article>
+                    <article class="character__values">
+                        <div id="gender"></div>
+                        <div id="height"></div>
+                        <div id="mass"></div>
+                        <div id="birth_year"></div>
+                        <div id="homeworld"></div>
+                        <div id="species"></div>
+                    </article>
+                </section>
+                <button id="random-button">Random</button>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    <script src="js_intermediate_project.js"></script>
+</body>
+</html>
