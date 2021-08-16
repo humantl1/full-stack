@@ -1,0 +1,3 @@
+This is file text
+and this is the next line of the text
+and this is the last line of text

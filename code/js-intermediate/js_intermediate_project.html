@@ -22,12 +22,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript 201 Project</title>
     <link rel="stylesheet" href="js_intermediate_project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
 </head>
 <body class="test-border page">
         <header class ="header">
             <div></div>
             <nav>
-                <div>swapi</div>
+                <a id="swapi" class="transition" href="https://swapi.dev/">swapi</a>
                 <div>
                     <ul>
                         <li>tw</li>
@@ -43,12 +48,15 @@
                 <header class="character__name">Character</header>
                 <section class="character__info">
                     <article class="character__attributes">
-                        <div>Gender:</div>
-                        <div>Height:</div>
-                        <div>Weight:</div>
-                        <div>Birth year:</div>
-                        <div>Homeworld:</div>
-                        <div>Species:</div>
+                        <div id="gender-att">Gender:</div>
+                        <div id="height-att">Height:</div>
+                        <div id="mass-att">Weight:</div>
+                        <div id="birth_year-att">Birth year:</div>
+                        <div id="homeworld-att">Homeworld:</div>
+                        <div id="species-att">Species:</div>
+                        <div id="starships-att">Starships:</div>
+                        <div id="vehicles-att">Vehicles:</div>
+                        <div id="films-att">Films:</div>
                     </article>
                     <article class="character__values">
                         <div id="gender"></div>
@@ -57,6 +65,9 @@
                         <div id="birth_year"></div>
                         <div id="homeworld"></div>
                         <div id="species"></div>
+                        <div id="starships"></div>
+                        <div id="vehicles"></div>
+                        <div id="films"></div>
                     </article>
                 </section>
                 <button id="random-button">Random</button>
